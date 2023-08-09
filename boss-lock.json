@@ -1,0 +1,70 @@
+{
+	"hash": "d41d8cd98f00b204e9800998ecf8427e",
+	"updated": "2023-08-08T23:33:09.0181746-03:00",
+	"installedModules": {
+		"github.com/gabrielbaltazar/gbjson": {
+			"name": "gbjson",
+			"version": "1.0.11",
+			"hash": "9f3f8d23501e9249638dd6a332a536c0",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"github.com/hashload/cqlbr": {
+			"name": "cqlbr",
+			"version": "1.1.51",
+			"hash": "386b4fc4f8eb7504e59ef84e13633c68",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"github.com/hashload/dbcbr": {
+			"name": "dbcbr",
+			"version": "1.1.5",
+			"hash": "1e70229b2669f0d62f3fce34cc284c71",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"github.com/hashload/dbebr": {
+			"name": "dbebr",
+			"version": "1.1.5",
+			"hash": "aec8a61fe3694d789b0ff296343a0b50",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"github.com/hashload/horse": {
+			"name": "horse",
+			"version": "3.1.4",
+			"hash": "54665bed032fc96d1398bf5df6332754",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"github.com/hashload/jhonson": {
+			"name": "jhonson",
+			"version": "1.1.6",
+			"hash": "6408c0964998a945994d4bf29d2c88c5",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"github.com/hashload/jsonbr": {
+			"name": "jsonbr",
+			"version": "1.1.5",
+			"hash": "00bb668d619fb01dd2fb2ecd6575fadf",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"https://github.com/hashload/ormbr": {
+			"name": "ormbr",
+			"version": "1.1.5",
+			"hash": "b545830b2e356da09865b57366148a75",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		}
+	}
+}

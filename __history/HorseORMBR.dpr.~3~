@@ -1,0 +1,21 @@
+program HorseORMBR;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils,
+  HorseORMBR.Model.Cliente in 'src\Model\HorseORMBR.Model.Cliente.pas',
+  HorseORMBR.DAO.Cliente in 'src\DAO\HorseORMBR.DAO.Cliente.pas',
+  HorseORMBR.Controller.Cliente in 'src\Controller\HorseORMBR.Controller.Cliente.pas',
+  HorseORMBR.DAO.dataModule in 'src\DAO\dataModule\HorseORMBR.DAO.dataModule.pas' {DMConection: TDataModule};
+
+begin
+  try
+    { TODO -oUser -cConsole Main : Insert code here }
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.

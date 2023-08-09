@@ -1,0 +1,70 @@
+unit HorseORMBR.DAO.Cliente;
+
+interface
+
+uses
+  dbebr.factory.interfaces,
+  dbebr.factory.firedac,
+  ormbr.container.objectset.interfaces,
+  ormbr.container.objectset,
+  System.Classes,
+  System.SysUtils,
+  System.Generics.Collections,
+  HorseORMBR.Model.Cliente;
+
+type
+  TDAOCliente = class
+  private
+    FConnection : IDBConnection;
+    FContainer : IContainerObjectSet<TCliente>;
+  public
+    constructor Create(pComponent: TComponent);
+    function find(pId : Integer) : TCliente;
+    function ListAll : TObjectList<TCliente>;
+    procedure Insert(pCliente : TCliente);
+    procedure Delete(pCliente : TCliente);
+    procedure Update(pCliente : TCliente);
+    procedure Modify(pCliente : TCliente);
+  end;
+
+implementation
+
+{ TDAOCliente }
+
+constructor TDAOCliente.Create(pComponent: TComponent);
+begin
+  FConnection := TFactoryFireDAC.Create(pComponent, dnFirebird);
+  FContainer := TContainerObjectSet<TCliente>.Create(FConnection);
+end;
+
+procedure TDAOCliente.Delete(pCliente: TCliente);
+begin
+  FContainer.Delete(pCliente);
+end;
+
+function TDAOCliente.find(pId: Integer): TCliente;
+begin
+  Result := FContainer.Find(pId);
+end;
+
+procedure TDAOCliente.Insert(pCliente: TCliente);
+begin
+  FContainer.Insert(pCliente);
+end;
+
+function TDAOCliente.ListAll: TObjectList<TCliente>;
+begin
+  Result := FContainer.Find;
+end;
+
+procedure TDAOCliente.Modify(pCliente: TCliente);
+begin
+  FContainer.Modify(pCliente);
+end;
+
+procedure TDAOCliente.Update(pCliente: TCliente);
+begin
+  FContainer.Update(pCliente);
+end;
+
+end.

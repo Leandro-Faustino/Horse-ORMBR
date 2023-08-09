@@ -1,0 +1,21 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+*.dcu
+*.bpl
+*.map
+*.tvsconfig
+*.txaPackage
+*.local
+*.otares
+*.identcache
+*.stat
+*.exe
+*.map
+*.rsm
+__history/
+__recovery/
+Win32/
+Lib/
+# Examples/
+# Examples/Data/
+# Examples/JSON/
+/modules

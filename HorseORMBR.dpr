@@ -1,0 +1,23 @@
+program HorseORMBR;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  Horse,
+  Horse.Jhonson,
+  Ormbr.dml.generator.firebird,
+  System.SysUtils,
+  HorseORMBR.Model.Cliente in 'src\Model\HorseORMBR.Model.Cliente.pas',
+  HorseORMBR.DAO.Cliente in 'src\DAO\HorseORMBR.DAO.Cliente.pas',
+  HorseORMBR.Controller.Cliente in 'src\Controller\HorseORMBR.Controller.Cliente.pas',
+  HorseORMBR.DAO.dataModule in 'src\DAO\dataModule\HorseORMBR.DAO.dataModule.pas' {DMConection: TDataModule};
+
+begin
+  THorse
+    .Use(Jhonson);
+
+   ClienteRegistry;
+   THorse.Listen(9000);
+end.

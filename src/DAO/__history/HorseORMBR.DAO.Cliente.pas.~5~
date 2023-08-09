@@ -1,0 +1,34 @@
+unit HorseORMBR.DAO.Cliente;
+
+interface
+
+uses
+  dbebr.factory.interfaces,
+  dbebr.factory.firedac,
+  ormbr.container.objectset.interfaces,
+  ormbr.container.objectset,
+  System.Classes,
+  System.SysUtils,
+  System.Generics.Collections,
+  HorseORMBR.Model.Cliente;
+
+type
+  TDAOCliente = class
+  private
+    FConnection : IDBConnection;
+    FContainer : IContainerObjectSet<TCliente>;
+  public
+    constructor Create(pComponent: TComponent);
+  end;
+
+implementation
+
+{ TDAOCliente }
+
+constructor TDAOCliente.Create(pComponent: TComponent);
+begin
+  FConnection := TFactoryFireDAC.Create(pComponent, dnFirebird);
+  FContainer := TContainerObjectSet<TCliente>.Create(FConnection);
+end;
+
+end.

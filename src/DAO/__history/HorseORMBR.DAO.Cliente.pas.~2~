@@ -1,0 +1,25 @@
+unit HorseORMBR.DAO.Cliente;
+
+interface
+
+uses
+  dbebr.factory.interfaces,
+  dbebr.factory.firedac,
+  ormbr.container.objectset.interfaces,
+  ormbr.container.objectset,
+  System.Classes,
+  System.SysUtils,
+  System.Generics.Collections,
+  HorseORMBR.Model.Cliente;
+
+type
+  TDAOCliente = class
+  private
+    FConnection : IDBConnection;
+    FContainer : IContainerObjectSet<TCliente>;
+  public
+  end;
+
+implementation
+
+end.

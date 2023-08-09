@@ -1,0 +1,39 @@
+unit HorseORMBR.Model.Cliente;
+
+interface
+
+uses
+  dbcbr.mapping.attributes,
+  dbcbr.types.mapping,
+  dbcbr.mapping.register,
+  Data.DB;
+
+type
+
+  [Entity]
+  [Table('cliente')]
+  [PrimaryKey('id', AutoInc,noSort,true,'chave primária')]
+  [Sequence('id')]
+
+  TCliente = class
+  private
+    Fid: Integer;
+    Fnome: String;
+    Fsobrenome: String;
+  public
+    [Column('id', ftAutoInc)]
+    property id: Integer read FId write FId;
+
+    [Column('nome', ftString)]
+    property nome: String read FNome write FNome;
+
+    [Column('sobrenome', ftString)]
+    property sobrenome: String read Fsobrenome write Fsobrenome;
+  end;
+
+implementation
+
+initialization
+  TRegisterClass.RegisterEntity(TCliente);
+
+end.
